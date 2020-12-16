@@ -4,11 +4,9 @@ on:
   push:
     branches:
       - main
-      - master
-  pull_request:
-    branches:
-      - main
-      - master
+    pull_request:
+      branches:
+        - main
 
 jobs:
   ci:
@@ -44,6 +42,7 @@ jobs:
       - name: Install dependencies 👨🏻‍💻
         run: yarn
 
-      - name: Run linter 👀
-        run: yarn lint
-
+      - name: Testing if still generating 🧪
+        run: yarn generate
+      # - name: Run linter 👀
+      #   run: yarn lint
