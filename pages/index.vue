@@ -1,25 +1,23 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">derhorst</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="full">
+    <div class="grid grid-cols-1 lg:grid-cols-6 gap-4 divide-black divide-x lg:gap-8 m-5 ">
+      <div class="p-4 col-span-1 lg:col-span-3 content-center content-between justify-items-center">
+        <h1 class="title">der_horst</h1>
+        <img src="~/assets/video.png" />
+      </div>
+      <div class="ter lg:col-span-2"><img src="~/assets/text-m-t.png" /><img src="~/assets/text-m-b.png" /></div>
+      <div class="p-4 text-center place-content-between">
+        <img src="~/assets/legs.png" />
+        <div class="links">
+          <a
+            href="https://nuxtjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button--grey"
+            >
+            Der Horst ist eine tolle Wurst
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -37,13 +35,15 @@ export default Vue.extend({})
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.container {
+.full {
   margin: 0 auto;
   min-height: 100vh;
+  max-width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
+  @apply items-stretch;
   text-align: center;
+  @apply h-full;
 }
 
 .title {
@@ -52,14 +52,14 @@ export default Vue.extend({})
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
   letter-spacing: 1px;
+  @apply text-black;
 }
 
 .subtitle {
   font-weight: 300;
   font-size: 42px;
-  color: #526488;
+  @apply text-black;
   word-spacing: 5px;
   padding-bottom: 15px;
 }
