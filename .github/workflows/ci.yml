@@ -42,8 +42,7 @@ jobs:
       - name: Install dependencies 👨🏻‍💻
         run: yarn
 
-      - name: Testing if still generating
+      - name: Testing if still generating 🧪
         run: yarn generate
       # - name: Run linter 👀
       #   run: yarn lint
-
